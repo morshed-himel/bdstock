@@ -1,5 +1,7 @@
 # Target Data Get 
 
+python3 grab_top.py 
+
 ## Dependency 
 
 pip or pip3   
@@ -17,16 +19,6 @@ pip or pip3
 
 ## Main 
 
-python3 grab_autotrader.py -ap
-
-python3 grab_craigslist.py -ap
-
-python3 grab_kijiji.py -ap
-
-* control + C to stop
-* control + C two times to unclean stop
-
-
 ## Todo
 - connect DB if needed
 
@@ -40,12 +32,9 @@ $ sudo chmod 600 /path/to/my/key.pem
 
 ssh -i morshed.pem ubuntu@34.234.172.91 
 
-
-
 systemctl status mysql.service
 sudo systemctl start mysql
 sudo systemctl stop mysql
-
 
 ## shell TEST
 $ scrapy shell

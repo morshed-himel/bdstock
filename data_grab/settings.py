@@ -1,13 +1,6 @@
 DOWNLOAD_DELAY = 6
 
 LOG_LEVEL = 'ERROR'  # CRITICAL, ERROR, WARNING, INFO, DEBUG
-FEED_FORMAT = 'csv'
-FEED_EXPORT_FIELDS = [
-    'code',
-    'LTP',
-    'high',
-    'low',
-]
 
 ROBOTSTXT_OBEY = False
 ROTATING_PROXY_LIST_PATH = 'db/proxies.txt'
