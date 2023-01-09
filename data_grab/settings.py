@@ -1,9 +1,13 @@
-DOWNLOAD_DELAY = 6
+DOWNLOAD_DELAY = 0
 
 LOG_LEVEL = 'ERROR'  # CRITICAL, ERROR, WARNING, INFO, DEBUG
+# FEED_FORMAT = 'json'
+# FEED_URI = 'db/output/top_listing.json'
+
 
 ROBOTSTXT_OBEY = False
 ROTATING_PROXY_LIST_PATH = 'db/proxies.txt'
+
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html

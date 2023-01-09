@@ -5,4 +5,6 @@
 
 class DataGrabPipeline:
     def process_item(self, item, spider):
+        print(">>", item.get('company_name'))
+
         return item

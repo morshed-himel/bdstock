@@ -1,4 +1,5 @@
 import os
+
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
@@ -10,12 +11,13 @@ class Scraper:
         settings_file_path = 'data_grab.settings'
         os.environ.setdefault('SCRAPY_SETTINGS_MODULE', settings_file_path)
 
-    def run_spiders(self, is_proxy_on):
+    def run_spiders(self, is_proxy_on, bank_list):
         spider = SingleSpider
         self.process = CrawlerProcess(get_project_settings())
 
-        self.process.settings.set("FEED_FORMAT", 'csv')
-        self.process.settings.set("FEED_URI", 'db/output/banks.csv')
+        for b in bank_list:
+            url = 'https://www.dse.com.bd/displayCompany.php?name='+b
+            spider.start_urls.append(url)
 
         if is_proxy_on:
             spider.custom_settings['DOWNLOADER_MIDDLEWARES'].update({

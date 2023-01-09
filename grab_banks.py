@@ -10,11 +10,10 @@ parser.add_argument('-p', '--proxy', help="use proxy", action='store_true')
 
 args = parser.parse_args()
 
-# if os.path.exists("db/output/top_listing.json"):
-#     os.remove("db/output/top_listing.json")
-#     print("Previous data removed..")
-# else:
-#     print("No previous data exist..")
+# bank_list = ['ABBANK', 'ALARABANK', 'BANKASIA']
+bank_list = ['ABBANK', 'ALARABANK', 'BANKASIA', 'BRACBANK', 'CITYBANK', 'DHAKABANK', 'DUTCHBANGL', 'EBL', 'EXIMBANK', 'FIRSTSBANK', 'GIB', 'ICBIBANK', 'IFIC', 'ISLAMIBANK', 'JAMUNABANK', 'MERCANBANK', 'MTB',
+             'NBL', 'NCCBANK', 'NRBCBANK', 'ONEBANKLTD', 'PREMIERBAN', 'PRIMEBANK', 'PUBALIBANK', 'RUPALIBANK', 'SBACBANK', 'SHAHJABANK', 'SIBL', 'SOUTHEASTB', 'STANDBANKL', 'TRUSTBANK', 'UCB', 'UNIONBANK', 'UTTARABANK']
+
 
 if args.proxy:
     print("getting proxy IP .. ")
@@ -22,4 +21,4 @@ if args.proxy:
 
 print("Starting .. ")
 scraper = Scraper()
-scraper.run_spiders(args.proxy)
+scraper.run_spiders(args.proxy, bank_list)
