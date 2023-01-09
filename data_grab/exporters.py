@@ -16,6 +16,10 @@ class MyCsvItemExporter(CsvItemExporter):
         'no_shares_traded': 'No. of shares traded',
         'no_trades': 'No. of  Trades',
         'market_cap': 'Market Capitalization (mn)',
+        '52_high': '52 Weeks Moving Range High',
+        '52_low': '52 Weeks Moving Range Low',
+        'total_shares': 'Total No. of shares',
+        'total_shares_10': '10%% of Total shares',
         'time': 'Update Time',
     }
 

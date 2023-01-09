@@ -34,6 +34,10 @@ class SingleSpider(scrapy.Spider):
             'no_shares_traded',
             'no_trades',
             'market_cap',
+            '52_high',
+            '52_low',
+            'total_shares',
+            'total_shares_10',
             'time'
         ],
     }
@@ -104,6 +108,22 @@ class SingleSpider(scrapy.Spider):
         # Market Capitalization (mn)
         item['market_cap'] = r.css(
             'tr:nth-child(7) td~ td::text').extract_first()
+
+        # 52 Weeks Moving Range High
+        # 52 Weeks Moving Range Low
+        high_low_52 = get_high_low(
+            r.css('th+ td:nth-child(3)::text').extract_first())
+
+        item['52_low'] = high_low_52[0]
+        item['52_high'] = high_low_52[1]
+
+        # Total No. of shares
+        item['total_shares'] = r.css(
+            '.alt:nth-child(4) td:nth-child(2)::text').extract_first()
+
+        # 10%% of Total shares
+        ts = item['total_shares'].replace(',', '')
+        item['total_shares_10'] = round(int(ts)/10)
 
         yield item
 
