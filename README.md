@@ -12,9 +12,15 @@ pip or pip3
 - pip3 install scrapy-rotating-proxies
 - pip3 install mysql-connector-python
 
+- pip install requests
+- pip install Scrapy
+- pip install scrapy-useragents
+- pip install scrapy-rotating-proxies
+- pip install mysql-connector-python
+
 ## Process
 # if using virtual env
-- python3 -m venv env # firsttime
+- python3 -m venv env 
 - source env/bin/activate
 
 ## Main 
