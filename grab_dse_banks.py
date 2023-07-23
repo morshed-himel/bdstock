@@ -10,9 +10,41 @@ parser.add_argument('-p', '--proxy', help="use proxy", action='store_true')
 
 args = parser.parse_args()
 
-# bank_list = ['ABBANK', 'ALARABANK', 'BANKASIA']
-bank_list = ['ABBANK', 'ALARABANK', 'BANKASIA', 'BRACBANK', 'CITYBANK', 'DHAKABANK', 'DUTCHBANGL', 'EBL', 'EXIMBANK', 'FIRSTSBANK', 'GIB', 'ICBIBANK', 'IFIC', 'ISLAMIBANK', 'JAMUNABANK', 'MERCANBANK', 'MTB',
-             'NBL', 'NCCBANK', 'NRBCBANK', 'ONEBANKLTD', 'PREMIERBAN', 'PRIMEBANK', 'PUBALIBANK', 'RUPALIBANK', 'SBACBANK', 'SHAHJABANK', 'SIBL', 'SOUTHEASTB', 'STANDBANKL', 'TRUSTBANK', 'UCB', 'UNIONBANK', 'UTTARABANK']
+bank_list = ['ABBANK',
+             'ALARABANK',
+             'BANKASIA',
+             'BRACBANK',
+             'CITYBANK',
+             'DHAKABANK',
+             'DUTCHBANGL',
+             'EBL',
+             'EXIMBANK',
+             'FIRSTSBANK',
+             'GIB',
+             'ICBIBANK',
+             'IFIC',
+             'ISLAMIBANK',
+             'JAMUNABANK',
+             'MERCANBANK',
+             'MIDLANDBNK',
+             'MTB',
+             'NBL',
+             'NCCBANK',
+             'NRBCBANK',
+             'ONEBANKLTD',
+             'PREMIERBAN',
+             'PRIMEBANK',
+             'PUBALIBANK',
+             'RUPALIBANK',
+             'SBACBANK',
+             'SHAHJABANK',
+             'SIBL',
+             'SOUTHEASTB',
+             'STANDBANKL',
+             'TRUSTBANK',
+             'UCB',
+             'UNIONBANK',
+             'UTTARABANK']
 
 
 if args.proxy:

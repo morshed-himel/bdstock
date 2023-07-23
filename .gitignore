@@ -20,3 +20,4 @@ env/
 # Custome
 .vscode/
 temp/
+output/
