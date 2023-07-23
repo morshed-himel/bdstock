@@ -3,7 +3,7 @@ import time
 
 
 class SingleSpider(scrapy.Spider):
-    timestr = time.strftime("%Y-%m-%d %H-%M-%S")
+    timestr = time.strftime("%d-%m-%Y %H-%M-%S")
 
     name = 'SingleSpider'
     start_urls = []
@@ -11,7 +11,7 @@ class SingleSpider(scrapy.Spider):
 
     custom_settings = {
         'FEED_FORMAT': 'csv',
-        'FEED_URI': 'output/' + timestr + '.csv',
+        'FEED_URI': 'output/dse_' + timestr + '.csv',
         'FEED_EXPORTERS': {
             'csv': 'data_grab.exporters.MyCsvItemExporter',
         },

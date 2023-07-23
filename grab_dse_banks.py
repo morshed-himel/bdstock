@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from data_grab.run_scraper_banks import Scraper
+from data_grab.run_scraper_banks_dse import Scraper
 from helper.get_proxy import refresh_proxy
 
 parser = argparse.ArgumentParser()
