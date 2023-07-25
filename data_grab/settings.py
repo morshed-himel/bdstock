@@ -11,9 +11,9 @@ ROTATING_PROXY_LIST_PATH = 'db/proxies.txt'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'data_grab.pipelines.DataGrabPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#     'data_grab.pipelines.DataGrabPipeline': 300,
+# }
 
 # DOWNLOADER_MIDDLEWARES = {
 #     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,

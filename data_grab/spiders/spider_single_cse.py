@@ -15,6 +15,9 @@ class SingleSpiderCSE(scrapy.Spider):
         'FEED_EXPORTERS': {
             'csv': 'data_grab.exporters.cseItemExporter',
         },
+        'ITEM_PIPELINES': {
+            'data_grab.pipelines.DataGrabPipeline': 300,
+        },
         'LOG_LEVEL': 'ERROR',  # CRITICAL, ERROR, WARNING, INFO, DEBUG
         'DOWNLOADER_MIDDLEWARES': {
             'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
