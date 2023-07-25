@@ -4,6 +4,7 @@ import time
 
 class SingleSpider(scrapy.Spider):
     timestr = time.strftime("%d-%m-%Y %H-%M-%S")
+    category = ""
 
     name = 'SingleSpider'
     start_urls = []
@@ -24,6 +25,7 @@ class SingleSpider(scrapy.Spider):
             'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware': 500,
         },
         'FEED_EXPORT_FIELDS': [
+            'category',
             'company_name',
             'code',
             'op',
@@ -50,6 +52,8 @@ class SingleSpider(scrapy.Spider):
 
         print(str(self.count) + "/" + str(len(self.start_urls)))
         item = {}
+
+        item["category"] = self.category
 
         # Last Update time
         info_date = r.css(

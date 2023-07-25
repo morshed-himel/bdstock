@@ -3,6 +3,7 @@ from scrapy.exporters import CsvItemExporter
 
 class MyCsvItemExporter(CsvItemExporter):
     header_map = {
+        'category': "Category",
         'company_name': "Name of the Company",
         'code': 'Trading Code',
         'op': 'Opening Price',
